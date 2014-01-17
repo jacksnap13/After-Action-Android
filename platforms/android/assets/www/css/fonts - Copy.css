@@ -1,0 +1,171 @@
+/*
+.proximanova-bold 
+.proximanova-bold-italic
+.proximanova-extra-bold 
+.proximanova-light
+.proximanova-light-italic 
+.proximanova 
+.proximanova-italic 
+.proximanova-semibold 
+.proximanova-semibold-italic
+
+.proximanova-soft
+.proximanova-soft-bold
+.proximanova-soft-medium
+.proximanova-soft-semibold
+*/
+
+@font-face {
+    font-family: 'ProximaNovaBlack';
+    src: url('./fonts/proximanova-black.svg#proxima_novablack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('./fonts/proximanova-bold.svg#proxima_novabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaBoldItalic';
+    src: url('./fonts/proximanova-bold-italic.svg#proxima_nova_rgbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaExtraBold';
+    src: url('./fonts/proximanova-extra-bold.svg#proxima_novaextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('./fonts/proximanova-light.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaLightItalic';
+    src: url('./fonts/proximanova-light-italic.svg#proxima_novalight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('./fonts/proximanova-regular.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegularItalic';
+    src: url('./fonts/proximanova-regular-italic.svg#proxima_novaregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url('./fonts/proximanova-semibold.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemiboldItalic';
+    src: url('./fonts/proximanova-semibold-italic.svg#proxima_novasemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSoft';
+    src: url('./fonts/proximanova-soft.svg#proxima_nova_softregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSoftBold';
+    src: url('./fonts/proximanova-soft-bold.svg#proxima_nova_softbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSoftMedium';
+    src: url('./fonts/proximanova-soft-medium.svg#proxima_nova_softmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSoftSemiBold';
+    src: url('./fonts/proximanova-soft-semibold.svg#proxima_nova_softsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.proximanova-black {
+	font-family: ProximaNovaBlack;
+}
+
+.proximanova-bold {
+	font-family: ProximaNovaBold;
+}
+
+.proximanova-bold-italic {
+	font-family: ProximaNovaBoldItalic;
+}
+
+.proximanova-extra-bold {
+	font-family: ProximaNovaExtraBold;
+}
+
+.proximanova-light {
+	font-family: ProximaNovaLight;
+}
+
+.proximanova-light-italic {
+	font-family: ProximaNovaLightItalic;
+}
+
+.proximanova {
+	font-family: ProximaNovaRegular;
+}
+
+.proximanova-italic {
+	font-family: ProximaNovaRegularItalic;
+}
+
+.proximanova-semibold {
+	font-family: ProximaNovaSemibold;
+}
+
+.proximanova-semibold-italic {
+	font-family: ProximaNovaSemiboldItalic;
+}
+
+.proximanova-soft {
+    font-family: ProximaNovaSoft;
+}
+
+.proximanova-soft-bold {
+    font-family: ProximaNovaSoftBold;
+}
+
+.proximanova-soft-medium {
+    font-family: ProximaNovaSoftMedium;
+}
+
+.proximanova-soft-semibold {
+    font-family: ProximaNovaSoftSemiBold;
+}

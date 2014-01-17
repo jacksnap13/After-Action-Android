@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+<title>After Action</title>
+<link rel='stylesheet' href="css/fonts.css">
+<link rel='stylesheet' href="css/animate-custom.css">
+<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+<link rel='stylesheet' href="css/style.css?v=1.6">
+</head>
+<body>
+<div id="wrapper">	
+<a id="editarea" href="#"></a>
+<div id="header">
+	<h2>AFTER-ACTION review</h2>
+</div>
+<!--///////////////////////////////////////////////   WELCOME     //////////////////////////////-->
+<section id="welcome" class="welcome">
+<figure class="shadow1"></figure>
+<div class="introcontain">
+	<img src="images/bottle.png" id="bottle"/>
+	<h1 class="animated bounceInUp">welcome</h1>
+	<p class="animated2 fadeIn" id="introText">This tool is designed to track what was accomplished during a customer meeting, how effective the Collaborating for Value process was utilized and what should be addressed in future meetings.</p>
+</div>
+<form class="initiallogin loginform ini">
+	<p class="firstwe"><span>First we need some information...</span></p>
+	<fieldset>
+				<label for=user>Name</label>
+				<input id="user" type=text placeholder="Your name (required)">
+		</fieldset>
+		<fieldset>
+				<label for=email>Email</label>
+				<input id="email" type=email  placeholder="Your email (required)">
+		</fieldset>
+	
+</form>
+<figure class="shadow1"></figure>
+</section>
+<!--//////////////////////////////////////////////////////////////////     THE LIST     ///////////////////////////////////////////////-->
+<section id="list" class="listofreviews hidden">
+	<h4>Completed After Action Reviews</h4>
+	<div class='editbuttonscontainer'>
+		<div class="sortlist"><p>SORT</p></div>
+		<aside class="flyout">
+			<ol>
+				<li id="sortCus">Customer</li>
+				<li id="sortMan">Manager</li>
+				<li id="sortDate">Date</li>
+			</ol>
+		</aside>
+		<div class="editlist"><p>EDIT</p></div>
+	</div> 
+	<div class="thelist">
+		<ul id="thelist">
+			
+		</ul>
+	</div>
+</section>
+<section id="questions" class="hidden">
+<!-- //////////////////////////    QUESTIONS    ///////////////////// -->
+<figure class="shadow1"></figure>
+		<ol class="orderedList">
+		<li class="visible" id="login">
+			<h3>Meeting Information</h3>
+			<form class="loginform" id="customerinfo">
+				<fieldset class="firstrow">
+						<label for=manager>Customer Manager Name</label>
+						<input id="manager" placeholder="First and last name (required)" required>
+				</fieldset>
+				<fieldset class="secondrow">
+						<label for=customer>Customer Name</label>
+						<input id="customer" placeholder="Customer/account name (required)" required>
+				</fieldset>
+				<fieldset class="thirdrow">
+						<label for=meeting>Meeting Title</label>
+						<input id="meeting" placeholder="Name of the event (required)" required>
+				</fieldset>
+				<fieldset class="fourthrow">
+						<label for=dateinput id="datelabel">Meeting Date</label>
+						<input id="dateinput" placeholder="Date of the event or meeting" type="date">
+				</fieldset>
+			</form>
+		</li>
+	
+		<!-- ////////////////////////////////////////////    QUESTION 1    /////////////////////////////////////////////// -->
+		<li id="li1" class="numbered">
+			<p class="question">Did we achieve our planned destination for this meeting?</p>
+			<form class="radio">
+				<input id="yes1" type="radio" name="one" value="yes" class="yes">
+				<label for="yes1">Yes</label>
+				<input id="no1" type="radio" name="one" value="no" class="no">
+				<label for="no1">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion1" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 2   /////////////////////////////////////////////// -->
+		<li id="li2" class="numbered">
+			<p class="question">Did we begin with a discussion of the customer's needs?<br/><br/>
+				Did our understanding of the needs resonate well with the customer and connect to their operating model?
+			</p>
+			<form class="radio">
+				<input id="yes2" type="radio" name="two" value="yes" class="yes">
+				<label for="yes2">Yes</label>
+				<input id="no2" type="radio" name="two" value="no" class="no">
+				<label for="no2">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion2" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 3    /////////////////////////////////////////////// -->
+		<li id="li3" class="numbered">
+			<p class="question">Did we use active listening skills to build rapport and clarify their needs?</p><br/>
+				<p class="question bull">&nbsp;Listen</p>
+				<p class="question bull">&nbsp;Acknowledge</p>
+				<p class="question bull">&nbsp;Probe</p>
+				<p class="question bull">&nbsp;Respond</p>
+			<form class="radio">
+				<input id="yes3" type="radio" name="three" value="yes" class="yes">
+				<label for="yes3">Yes</label>
+				<input id="no3" type="radio" name="three" value="no" class="no">
+				<label for="no3">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion3" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+		
+		<!-- ////////////////////////////////////////////    QUESTION 4    /////////////////////////////////////////////// -->
+		<li id="li4" class="numbered">
+			<p class="question">Did we have a clear statement of our big idea?</p><br/>
+				<p class="question numb1">&nbsp;What we want the customer to do</p>
+				<p class="question numb2">&nbsp;The key benefit</p>
+			<form class="radio">
+				<input id="yes4" type="radio" name="four" value="yes" class="yes">
+				<label for="yes4">Yes</label>
+				<input id="no4" type="radio" name="four" value="no" class="no">
+				<label for="no4">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion4" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 5    /////////////////////////////////////////////// -->
+		<li id="li5" class="numbered">
+			<p class="question">Did we give a clear explanation of how our proposal works with the level of detail appropriate for attendees?</p><br/>
+			<form class="radio">
+				<input id="yes5" type="radio" name="five" value="yes" class="yes">
+				<label for="yes5">Yes</label>
+				<input id="no5" type="radio" name="five" value="no"  class="no">
+				<label for="no5">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion5" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 6    /////////////////////////////////////////////// -->
+		<li id="li6" class="numbered">
+			<p class="question">Did we demonstrate the benefits of our proposal for their business in a way that was believable to the customer?</p><br/>
+			<form class="radio">
+				<input id="yes6" type="radio" name="six" value="yes" class="yes">
+				<label for="yes6">Yes</label>
+				<input id="no6" type="radio" name="six" value="no" class="no">
+				<label for="no6">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion6" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 7    /////////////////////////////////////////////// -->
+		<li id="li7" class="numbered">
+			<p class="question">Did the presentation meet our standards for CFV presentations?</p><br/>
+			<p class="question bull">&nbsp;Right length for the topic planned?</p>
+			<p class="question bull">&nbsp;Sentence headlines tell a story?</p>
+			<p class="question bull">&nbsp;Visuals/copy uncluttered and effectively supporting each headline?</p>
+			<p class="question bull">&nbsp;Followed persuasive selling structure?</p>
+			<p class="question bull">&nbsp;Appropriate for customer's thinking style?</p>
+			<form class="radio">
+				<input id="yes7" type="radio" name="seven" value="yes" class="yes">
+				<label for="yes7">Yes</label>
+				<input id="no7" type="radio" name="seven" value="no" class="no">
+				<label for="no7">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion7" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 8    /////////////////////////////////////////////// -->
+		<li id="li8" class="numbered">
+			<p class="question">Did we handle objections (LAPROC) and close effectively?</p><br/>
+			<form class="radio">
+				<input id="yes8" type="radio" name="eight" value="yes" class="yes">
+				<label for="yes8">Yes</label>
+				<input id="no8" type="radio" name="eight" value="no" class="no">
+				<label for="no8">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion8" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 9    /////////////////////////////////////////////// -->
+		<li id="li9" class="numbered">
+			<p class="question">Do we have clear takeaways from the meeting and the insights needed to create the meeting report for the customer?</p><br/>
+			<form class="radio">
+				<input id="yes9" type="radio" name="nine" value="yes" class="yes">
+				<label for="yes9">Yes</label>
+				<input id="no9" type="radio" name="nine" value="no" class="no">
+				<label for="no9">No</label>
+			</form>
+			<p class="question">Meeting report will be sent to the client by:</p>
+			<div id="datepicker"></div>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion9" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    QUESTION 10    /////////////////////////////////////////////// -->
+		<li id="li10" class="numbered">
+			<p class="question">Did we achieve effective stewardship as part of this meeting?</p><br/>
+			<p class="question">(i.e. communicate and validate the value we have delivered to their business in recent activity)</p><br/>
+			<form class="radio">
+				<input id="yes10" type="radio" name="ten" value="yes" class="yes">
+				<label for="yes10">Yes</label>
+				<input id="no10" type="radio" name="ten" value="no" class="no">
+				<label for="no10">No</label>
+			</form>
+			<div class="addnote">
+				<div class="noteinside"><span>SUGGESTION</span></div>
+			</div>
+			<div class="save">SAVE</div>
+			<aside class="suggestion">
+				<form>
+				<p class="close">X</p>
+				<p class="pleaseenter">&nbsp;Please enter your suggestion.</p>
+				<textarea id="suggestion10" maxlength=140 placeholder="Limited to 140 characters"></textarea><button type="button">SAVE</button>
+				<p class="charactercount"></p>
+				</form>
+			</aside>
+		</li>
+
+		<!-- ////////////////////////////////////////////    OVERALL SUGGESTIONS   /////////////////////////////////////////////// -->
+		<li id="li11">
+			<h3>Additional suggestions</h3>
+			<form>
+			<textarea maxlength=140 placeholder="Please enter any additional suggestions you have for future meetings. Limited to 140 characters."></textarea>
+			</form>
+			<div class="save">SAVE</div>
+			<p class="rcharcount"></p>
+			<div id="scrollformore"><p>&#709; &nbsp; &nbsp; &nbsp;Scroll to see more&nbsp;&nbsp;&nbsp; &#709;</p></div>
+		</li>
+
+		<!-- ////////////////////////////////////////////    REPORT   /////////////////////////////////////////////// -->
+		<li id="report">
+			<h3>After-Action Review Score</h3><div class="scorecircle"><p class="score scorep">N/A</p></div>
+			<div id="reportAlert"><p class="alertClose1">X</p><p>Please read through the report and check your answers. Remember to click the SAVE button at the end, and be sure to email a copy.</p></div>
+			<section class="reportlist ans white" data-list="li1">
+				<article>
+					<img src="images/num1.png"/>
+					<p>Did we achieve our planned destination for this meeting?</p>
+					<div class="rescontain">
+					<h5 class="response one">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay" data-role="suggestion1"></div>
+				</article>
+			</section>
+			<section class="reportlist ans" data-list="li2">
+				<article>
+					<img src="images/num2.png"/>
+					<p>Did we begin with a discussion of the customer's needs?<br/><br/>
+				Did our understanding of the needs resonate well with the customers and connect to their operating model?</p>
+					<div class="rescontain">
+					<h5 class="response two">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion2"></div>
+				</article>
+			</section>
+			<section class="reportlist white ans" data-list="li3">
+				<article>
+					<img src="images/num3.png"/>
+					<p>Did we use active listening skills to build rapport and clarify their needs?</p>
+					<div class="rescontain">
+					<h5 class="response three">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion3"></div>
+				</article>
+			</section>
+			<section class="reportlist ans" data-list="li4">
+				<article>
+					<img src="images/num4.png"/>
+					<p>Did we have a clear statement of our big idea?</p>
+					<div class="rescontain">
+					<h5 class="response four">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion4"></div>
+				</article>
+			</section>
+			<section class="reportlist white ans" data-list="li5">
+				<article>
+					<img src="images/num5.png"/>
+					<p>Did we give a clear explanation of how our proposal worked with the level of detail appropriate for attendees?</p>
+					<div class="rescontain">
+					<h5 class="response five">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion5"></div>
+				</article>
+			</section>
+			<section class="reportlist ans" data-list="li6">
+				<article>
+					<img src="images/num6.png"/>
+					<p>Did we demonstrate the benefits of our proposal for their business in a way that was believable and relevant to their needs?</p>
+					<div class="rescontain">
+					<h5 class="response six">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion6"></div>
+				</article>
+			</section>
+			<section class="reportlist ans white" data-list="li7">
+				<article>
+					<img src="images/num7.png"/>
+					<p>Did the presentation meet our standards for CFV presentations?</p>
+					<div class="rescontain">
+					<h5 class="response seven">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion7"></div>
+				</article>
+			</section>
+			<section class="reportlist ans" data-list="li8">
+				<article>
+					<img src="images/num8.png"/>
+					<p>Did we handle objections (LAPROC) and close effectively?</p>
+					<div class="rescontain">
+					<h5 class="response eight">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion8"></div>
+				</article>
+			</section>
+			<section class="reportlist ans white" data-list="li9">
+				<article>
+					<img src="images/num9.png"/>
+					<p>Do we have clear takeaways from the meeting and the insights needed to create the meeting report for the customer?</p>
+					<div class="rescontain">
+					<h5 class="response nine">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="meetingdatedisplay"></div>
+					<div class="suggdisplay"  data-role="suggestion9"></div>
+				</article>
+			</section>
+			<section class="reportlist ans" data-list="li10">
+				<article>
+					<img src="images/num10.png"/>
+					<p>Did we achieve effective stewardship as part of this meeting?</p>
+					<div class="rescontain">
+					<h5 class="response ten">N/A</h5>
+					<div class="editbutton"><span>EDIT</span></div>
+					</div>
+					<div class="suggdisplay"  data-role="suggestion10"></div>
+				</article>
+			</section>
+			<section class="reportlist white ans" id="reportoverall" data-list="li11">
+				<h3>Additional suggestions</h3>
+				<div>No suggestions have been submitted.</div>
+			</section>
+			<!-- <div id="saveall">SAVE</div> -->
+			<div id="savedAlert"><p class="alertClose">X</p><p>Your report has been saved. If you wish to email this report, please click on the email button below.</p></div>
+			<br/><br/><br/><br/><br/><br/><br/>
+			<aside class="suggestionreport">
+				<form><p>&nbsp;Your suggestion.</p>
+				<textarea id="suggestionview"></textarea><button type="button">SAVE</button></form>
+			</aside>
+			
+		</li>
+	</ol>
+</section>
+<section id="myinfo">
+	<form class="initiallogin loginform">
+		<h3>My Info</h3>
+		<fieldset>
+				<label for=user>Name</label>
+				<input id="userNew" type=text value="">
+		</fieldset>
+		<fieldset>
+				<label for=email>Email</label>
+				<input id="emailNew" type=email value="">
+		</fieldset>
+		<fieldset class="fourthrow">
+			<div class="myinfobutton"><p>OKAY</p></div>
+		</fieldset>
+	</form>
+</section>
+</div><!-- Close Wrapper -->
+<footer>
+<div class="progressbar hidden"></div>
+<figure class="shadow"></figure>
+	<nav>
+		<div class="animated2 fadeIn loginbutton"><div class="loginwrap"><p>LOGIN</p></div></div>
+		<a href="#" class="list hidden"></a>
+		<a href="#" id="saveall" class="email hidden"></a>
+		<a href="#" id="mailto" class="hidden"></a>
+		
+		
+		<a href="#" class="next hidden"></a>
+		<a href="#" class="back hidden"></a>
+		<a href="#" class="newreview hidden"><p>START A NEW REVIEW</p></a>
+		<div class="initialnext hidden"><div class="initialnextwrap"><p>LET'S GO</p></div></div>
+	</nav>
+	<p id="legalese">CONFIDENTIAL to the Coca-Cola System. &copy;2013 Coca-Cola | v4.13</p>
+</footer>
+
+ 	<script src="phonegap.js"></script>
+ 	<script src="js/retina-1.1.0.min.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+	<script type='text/javascript' src="js/script.js"></script>
+	<script>
+		$(function(){
+			$( "#datepicker" ).datepicker({
+			inline: false,
+			minDate: 0,
+			maxDate: 7
+		});
+		});
+		
+	</script>	
+</body>
+</html>
